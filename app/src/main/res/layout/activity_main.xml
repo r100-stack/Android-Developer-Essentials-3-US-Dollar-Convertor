@@ -7,70 +7,81 @@
     tools:context=".MainActivity">
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/et_entered_amount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:ems="10"
+        android:fontFamily="@font/roboto_medium"
+        android:gravity="center"
         android:hint="Enter amount in USD"
         android:inputType="none|numberDecimal"
+        android:lineSpacingExtra=".15sp"
+        android:textColor="#000000"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/tv_converted_amount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="Converted amount appears here"
+        android:fontFamily="sans-serif"
+        android:lineSpacingExtra=".25sp"
+        android:text="= ?"
+        android:textColor="#000000"
+        android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText" />
+        app:layout_constraintTop_toBottomOf="@+id/et_entered_amount" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btn_cad"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:background="#F44336"
-        android:text="Canadian Dollar"
+        android:onClick="btnCadClicked"
+        android:text="Canadian Dollar (CAD)"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_label" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/btn_inr"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:background="#F44336"
-        android:text="Indian Rupee"
+        android:onClick="btnInrClicked"
+        android:text="Indian Rupee (INR)"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_cad" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/btn_eur"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:background="#F44336"
-        android:text="Euro"
+        android:onClick="btnEurClicked"
+        android:text="Euro (EUR)"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button2" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_inr" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/tv_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="64dp"
-        android:text="Convert to"
+        android:layout_marginTop="96dp"
+        android:fontFamily="@font/roboto_medium"
+        android:lineSpacingExtra=".15sp"
+        android:text="Convert USD to"
+        android:textAllCaps="true"
+        android:textColor="#000000"
+        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_converted_amount" />
 </androidx.constraintlayout.widget.ConstraintLayout>
