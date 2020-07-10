@@ -1,7 +1,7 @@
-# Android Developer Essentials
+# Android Weekly Series
 
-Welcome to the Android Developer Essentials workshop series!
-Here we will cover all the essential skills needed to build complex, robust, and attractive Android apps.
+Welcome to the Android Weekly Series!
+Here we will cover all the essential skills needed to build professional, robust, and attractive Android apps.
 
 ## 3. US Dollar Converter
 
